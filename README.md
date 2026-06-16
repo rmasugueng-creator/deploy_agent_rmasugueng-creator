@@ -15,7 +15,10 @@ This repository contains an Infrastructure as Code (IaC) deployment agent (`setu
    ```
 
 ## How to Test the Process Trap (Emergency Archive Feature)
-1. Run the script utility: `./setup_project.sh`
+1. Run the script utility: 
+   ```bash
+   ./setup_project.sh
+   ```
 2. Enter any name when prompted to create the directory structure.
-3. When the script asks you if you want to update thresholds, break the execution by pressing **`Ctrl + C`** on your keyboard.
-4. The signal trap will immediately capture the interrupt, package your workspace into a `.tar.gz` archive file, and completely delete the incomplete template directory to maintain clean system storage.
+3. When the script asks you if you want to update thresholds, break the execution by pressing **Ctrl + C** on your keyboard.
+4. The signal trap will immediately capture the interrupt, package your workspace into an emergency archive file named `attendance_tracker_{input}_archive.tar.gz`, and completely delete the incomplete template directory to maintain clean system storage.
